@@ -281,6 +281,7 @@ function Checkout() {
           ))}
         </ul>
         <p className="total-price"><strong>Total: </strong>Rs{totalPrice.toFixed(2)}</p>
+        <p className='refund'>Returns or exchanges are accepted within 7 days of purchase only</p>
       </div>
     </div>
   );

@@ -150,6 +150,7 @@
 
   #printable-bill li {
     margin-bottom: 8px; /* Reduce space between items */
+    list-style: none;
   
   }
 
