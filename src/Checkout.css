@@ -1,0 +1,175 @@
+/* Checkout Container */
+.checkout-container {
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Headers */
+  h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .product-search-section, .cart-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Product Search */
+  .product-search-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .suggestions-dropdown {
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Cart */
+  .cart-items-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .process-btn {
+    width: 100%;
+  }
+  
+  /* Loading Spinner */
+  .loading-spinner {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #7f8c8d;
+  }
+  
+/* Print-specific styles */
+@media print {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center content */
+    height: 100%; /* Ensure body takes the full page height */
+    overflow: hidden; /* Prevent scrolling */
+  }
+
+  #printable-bill {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    page-break-before: always;
+    height: auto; /* Allow the content to fit without excess space */
+    max-height: 100%; /* Prevent overflow */
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .total-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px; /* Add space above total */
+  }
+
+  /* Ensure the bill fits within the page */
+  #printable-bill ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #printable-bill li {
+    margin-bottom: 8px; /* Reduce space between items */
+  
+  }
+
+  .loading-spinner, .checkout-container, .cart-section, .product-search-section {
+    display: none; /* Hide unnecessary UI components */
+  }
+
+  /* Remove other potential excess margins/padding */
+  .checkout-container, .product-search-section, .cart-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure no additional padding at the bottom */
+  @page {
+    margin: 0;
+  }
+  
+  /* Avoid page breaks within the printable bill content */
+  #printable-bill {
+    page-break-inside: avoid;
+  }
+}
