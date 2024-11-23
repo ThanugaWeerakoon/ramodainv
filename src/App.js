@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         {/* Shop Header */}
         <header className="app-header">
-          <h1>RA-MODA</h1>
+          <h1>RA-MÓDA</h1>
           <p className="tagline">Your Fashion, Our Passion</p>
         </header>
 

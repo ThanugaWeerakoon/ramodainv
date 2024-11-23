@@ -42,7 +42,7 @@ function AddProduct() {
   return (
     <div className="add-product-container">
       <header className="header">
-        <h1>RA-MODA</h1>
+        <h1>RA-MÓDA</h1>
         <p className="subtitle">Your Fashion, Our Passion</p>
       </header>
       <div className="form-container">
