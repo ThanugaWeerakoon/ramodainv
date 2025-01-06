@@ -9,7 +9,7 @@
 
 /* Header Styles */
 .app-header {
-  background-color: #3498db;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 30px 0;
@@ -49,20 +49,20 @@
 .nav-link {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #3498db;
+  color: #000000;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #2980b9;
+  color: #000000;
 }
 
 /* Horizontal Line */
 hr {
   margin: 20px 0;
   border: 0;
-  border-top: 2px solid #3498db;
+  border-top: 2px solid #080808;
 }
 
 /* Responsive Design */

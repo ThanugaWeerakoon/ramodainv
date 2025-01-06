@@ -79,7 +79,7 @@
   
   /* Buttons */
   button {
-    background-color: #3498db;
+    background-color: #000000;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -90,7 +90,7 @@
   }
   
   button:hover {
-    background-color: #2980b9;
+    background-color: #2e2e2e;
   }
   
   button:disabled {
