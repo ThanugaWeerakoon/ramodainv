@@ -174,3 +174,117 @@
     page-break-inside: avoid;
   }
 }
+.checkout-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.product-search-section, .cart-section {
+  margin-bottom: 20px;
+}
+
+.suggestions-dropdown {
+  border: 1px solid #ccc;
+  background: #fff;
+  position: absolute;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.cart-items-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.process-btn, .remove-btn {
+  margin-left: 10px;
+}
+
+.total-price {
+  font-weight: bold;
+}
+
+#printable-bill {
+  padding: 20px;
+  border: 1px solid #000;
+  width: 300px;
+  margin: auto;
+}
+
+#invoice-number {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#printable-bill {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #000;
+  background: #fff;
+  text-align: center;
+}
+
+#printable-bill h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+#printable-bill h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #000;
+  padding-bottom: 5px;
+}
+
+#printable-bill h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#printable-bill p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+#printable-bill ul {
+  list-style: none;
+  padding: 0;
+}
+
+#printable-bill li {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.total-price {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  border-top: 1px solid #000;
+  padding-top: 5px;
+}
+
+.refund {
+  font-size: 10px;
+  margin-top: 10px;
+  font-style: italic;
+}

@@ -15,6 +15,8 @@ const debounce = (func, delay) => {
   };
 };
 
+
+
 function Checkout() {
   const [checkoutProductId, setCheckoutProductId] = useState(''); 
   const [checkoutQuantity, setCheckoutQuantity] = useState(1);
@@ -23,6 +25,8 @@ function Checkout() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [productSuggestions, setProductSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [invoiceNumber, setInvoiceNumber] = useState('');
+  
 
   // Fetch product details based on productId
   const fetchProductDetails = async (productId) => {
@@ -42,6 +46,8 @@ function Checkout() {
       alert('Failed to fetch product details.');
     }
   };
+
+  
 
  
   const searchProducts = async (searchTerm) => {
@@ -173,11 +179,19 @@ function Checkout() {
     await batch.commit();
     alert('Sale processed and stock updated!');
 
-    // Trigger print
-    printBill();
+// Generate invoice number before printing
+const newInvoiceNumber = `INV-${Date.now()}`;
+setInvoiceNumber(newInvoiceNumber);
 
-    setCart([]);
-    setTotalPrice(0);
+// Wait for state update before printing
+setTimeout(() => {
+  printBill();
+
+  // Clear the cart and total after printing
+  setCart([]);
+  setTotalPrice(0);
+}, 100); // Small delay to ensure state updates
+   
   };
 
   // Print the bill
@@ -273,6 +287,9 @@ function Checkout() {
         <h2>Invoice</h2>
         <h3>Thank You For Choosing Us!</h3>
         <p><strong>Sale Date:</strong> {new Date().toLocaleDateString()}</p>
+        <p><strong>Sale Time:</strong> {new Date().toLocaleTimeString()}</p>
+        <p><strong>Invoice Number:</strong> {invoiceNumber}</p>
+      
         <ul>
           {cart.map((item, index) => (
             <li key={index}>
@@ -284,6 +301,8 @@ function Checkout() {
         <p className='refund'>Returns or exchanges are accepted within 7 days of purchase only</p>
       </div>
     </div>
+
+    
   );
 }
 
