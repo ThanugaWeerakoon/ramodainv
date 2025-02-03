@@ -282,26 +282,48 @@ setTimeout(() => {
 
       {loading && <div className="loading-spinner">Loading...</div>}
 
-      <div id="printable-bill" style={{ display: 'none' }}>
-      <h1>RA-MÓDA</h1>
-        <h2>Invoice</h2>
-        <h3>Thank You For Choosing Us!</h3>
-        <p><strong>Sale Date:</strong> {new Date().toLocaleDateString()}</p>
-        <p><strong>Sale Time:</strong> {new Date().toLocaleTimeString()}</p>
-        <p><strong>Invoice Number:</strong> {invoiceNumber}</p>
-      
-        <ul>
-          {cart.map((item, index) => (
-            <li key={index}>
-              <strong>{item.name}</strong> (x{item.quantity}) - Rs{item.total.toFixed(2)}
-            </li>
-          ))}
-        </ul>
-        <p className="total-price"><strong>Total: </strong>Rs{totalPrice.toFixed(2)}</p>
-        <p className='refund'>Returns or exchanges are accepted within 7 days of purchase only</p>
-      </div>
-    </div>
+      <div id="printable-bill" style={{ display: 'none', fontFamily: 'Arial, sans-serif', maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ddd', boxShadow: '0px 0px 10px rgba(0,0,0,0.1)' }}>
+  <div style={{ textAlign: 'center', borderBottom: '2px solid #000', paddingBottom: '10px', marginBottom: '10px' }}>
+    <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 'bold' }}>RA-MÓDA</h1>
+    <p style={{ fontSize: '14px', color: '#555' }}>Fashion Store | Contact: 123-456-7890</p>
+  </div>
 
+  <h2 style={{ textAlign: 'center', marginBottom: '5px' }}>Invoice</h2>
+  <p style={{ textAlign: 'center', fontSize: '12px', color: '#888' }}>Thank You For Choosing Us!</p>
+
+  <div style={{ marginBottom: '10px', fontSize: '14px' }}>
+    <p><strong>Sale Date:</strong> {new Date().toLocaleDateString()}</p>
+    <p><strong>Sale Time:</strong> {new Date().toLocaleTimeString()}</p>
+    <p><strong>Invoice Number:</strong> {invoiceNumber}</p>
+  </div>
+
+  <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '10px' }}>
+    <thead>
+      <tr style={{ backgroundColor: '#f4f4f4', borderBottom: '2px solid #000' }}>
+        <th style={{ textAlign: 'left', padding: '5px', marginLeft:'45px' }}>Item</th>
+        <th style={{ textAlign: 'center', padding: '5px' }}>Qty</th>
+        <th style={{ textAlign: 'right', padding: '15px' }}>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {cart.map((item, index) => (
+        <tr key={index} style={{ borderBottom: '1px solid #ddd' }}>
+          <td style={{ padding: '5px' }}>{item.name}</td>
+          <td style={{ textAlign: 'center', padding: '5px' }}>{item.quantity}</td>
+          <td style={{ textAlign: 'right', padding: '15px' }}>Rs{item.total.toFixed(2)}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <p style={{ textAlign: 'right', fontSize: '16px', fontWeight: 'bold' ,marginRight:'15px'}}>Total: Rs{totalPrice.toFixed(2)}</p>
+
+  <p style={{ fontSize: '12px', textAlign: 'center', marginTop: '10px', color: '#666' }}>
+    Returns or exchanges are accepted within <strong>7 days</strong> of purchase only.
+  </p>
+</div>
+
+</div>
     
   );
 }
