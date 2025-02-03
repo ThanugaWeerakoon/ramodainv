@@ -285,7 +285,7 @@ setTimeout(() => {
       <div id="printable-bill" style={{ display: 'none', fontFamily: 'Arial, sans-serif', maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ddd', boxShadow: '0px 0px 10px rgba(0,0,0,0.1)' }}>
   <div style={{ textAlign: 'center', borderBottom: '2px solid #000', paddingBottom: '10px', marginBottom: '10px' }}>
     <h1 style={{ margin: 0, fontSize: '24px', fontWeight: 'bold' }}>RA-MÓDA</h1>
-    <p style={{ fontSize: '14px', color: '#555' }}>Fashion Store | Contact: 123-456-7890</p>
+    <p style={{ fontSize: '14px', color: '#555' }}>Fashion Store | Contact: 076-608-2153</p>
   </div>
 
   <h2 style={{ textAlign: 'center', marginBottom: '5px' }}>Invoice</h2>
